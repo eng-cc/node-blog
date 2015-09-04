@@ -1,0 +1,10 @@
+div.row
+	- var pag = parseInt(page)
+	if(!isFirstPage)
+		span.pull-left
+			- var qpage = parseInt(pag-1);console.log(qpage)
+			a(href="?p=#{qpage}") 上一页
+	if(!isLastPage)
+		span.pull-right
+			-var hpage = parseInt(page+1);console.log(hpage)
+			a(href="?p=#{hpage}") 下一页

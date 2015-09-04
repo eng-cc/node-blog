@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+	h1 edit:#{post.tittle}
+	include ../nav
+	form(method="post",action="/edit/#{post.name}/#{post.time.day}/#{post.tittle}")
+		label 标题:
+		input(type="text", value="#{post.tittle}" ,disabled="disabled")
+		div
+			label 正文:
+			textarea(name = "article", rows="20",cols="100") #{post.article}
+			input(type="submit",value="更改")

@@ -1,0 +1,46 @@
+doctype
+html
+	head
+		meta(charset="utf-8")
+		title #{tittle}
+		link(href="/css/login.css",rel="stylesheet")
+		include ../head
+	body
+		//-block content
+		//-include ../footer
+
+	
+		//-h1 登录
+		.bg
+			.main
+				.main-top
+					.top-img
+						img(src="/images/001.png")
+				.main-content
+					.content-left.pull-left
+						div
+							img(src="/images/01.png")
+					.content-right.pull-right
+						.login-box
+							.login-top
+								a 用户登录
+							.login-main
+								form.form-group(method="post" action="/login")
+									p.iptp
+										input(type="text" placeholder="用户名|姓名" name="name")
+									p.iptp
+										input(type="password" placeholder="密码*****" name="password")
+									p.login-ckb
+										input.pull-left(type="checkbox" name="mendMe")
+										span
+										span.pull-right
+											a 忘记密码？
+									p.subm
+										input(type="submit"  class="submit" value="登 录")
+	//- include ../nav
+	//- form.form-group(method="post" action="/login")
+	//- 	label 用户名
+	//- 	input(type="text" , name="name")
+	//- 	label 密码
+	//- 	input(type="password", name="password")
+	//- 	input.btn(type="submit", value="登录")

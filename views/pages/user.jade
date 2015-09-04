@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+	h1 user:#{title}
+	include ../nav
+	div.row
+		each post in posts
+			div.col-sm-10.col-sm-offset-1.text-center 作者:#{post.name}
+			div.col-sm-10.col-sm-offset-1.text-center 时间:#{post.time.minute}
+			h2.col-sm-10.col-sm-offset-1.text-center
+				a(href="/u/#{post.name}/#{post.time.day}/#{post.tittle}") #{post.tittle}
+			div.col-sm-10.col-sm-offset-1.text-center !{post.article}

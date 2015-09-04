@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+	h1 post
+	include ../nav
+	form.form-group(method="post", action="/post")
+		label 标题
+		input.input-sm(type="text" ,name="tittle")
+		label 正文(使用markdown语法)
+		textarea.input-lg(name="article", rows='20', cols='100')
+		input.input-sm(type="submit", value="发表")
+		p
+		label 标签()：
+		input.input-sm(type="text" name="tag1")
+		input.input-sm(type="text" name="tag2")
+		input.input-sm(type="text" name="tag3")
